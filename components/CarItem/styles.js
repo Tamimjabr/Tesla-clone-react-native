@@ -1,11 +1,9 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 const styles = StyleSheet.create({
   carContainer: {
     width: '100%',
-    height: '100%',
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    height: Dimensions.get('window').height
   },
   titles: {
     width: '100%',
@@ -21,10 +19,10 @@ const styles = StyleSheet.create({
     color: '#5c5e62'
   },
   image: {
-    flex: 1,
     width: '100%',
-    justifyContent: 'center',
-    resizeMode: 'cover'
+    height: '100%',
+    resizeMode: 'cover',
+    justifyContent: 'space-between'
   },
   buttonsContainer: {
     width: '100%',
@@ -32,7 +30,8 @@ const styles = StyleSheet.create({
     height: '12%',
     marginBottom: '10%',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%'
   }
 })
 

@@ -5,8 +5,8 @@ import styles from './styles'
 
 const CarItem = ({ image, title, subTitle }) => {
   return (
-    <ImageBackground source={image} style={styles.image}>
-      <View style={styles.carContainer}>
+    <View style={styles.carContainer}>
+      <ImageBackground source={image} style={styles.image}>
         <View style={styles.titles}>
           <Text style={styles.title}>{title}</Text>
           <Text style={styles.subTitle}>{subTitle}</Text>
@@ -15,8 +15,8 @@ const CarItem = ({ image, title, subTitle }) => {
           <CustomButton type='primary' text='Preview' />
           <CustomButton type='secondary' text='Custom Order' />
         </View>
-      </View>
-    </ImageBackground>
+      </ImageBackground>
+    </View>
   )
 }
 
