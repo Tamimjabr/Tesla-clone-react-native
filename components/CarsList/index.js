@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles'
 import cars from './cars'
-import { Text, View, FlatList } from 'react-native'
+import { Text, View, FlatList, Dimensions } from 'react-native'
 import CarItem from '../CarItem'
 
 const CarsList = () => {
@@ -9,7 +9,11 @@ const CarsList = () => {
     <View style={styles.container}>
       <FlatList
         data={cars}
-        // keyExtractor={(item, index) => index.toString()}
+        // ListEmptyComponent={<Text>No cars</Text>}
+        // ListFooterComponent={
+        //   <Text style={styles.footer}>Stay tuned for more models</Text>
+        // }
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <CarItem
             image={item.image}
@@ -17,6 +21,10 @@ const CarsList = () => {
             subTitle={item.subTitle}
           />
         )}
+        snapToAlignment='start'
+        decelerationRate={'normal'}
+        snapToInterval={Dimensions.get('window').height}
+        showsVerticalScrollIndicator={false}
       ></FlatList>
     </View>
   )
