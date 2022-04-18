@@ -3,16 +3,13 @@ import { Text, View, ImageBackground } from 'react-native'
 import CustomButton from '../CustomButton'
 import styles from './styles'
 
-const CarItem = ({}) => {
+const CarItem = ({ image, title, subTitle }) => {
   return (
-    <ImageBackground
-      source={require('../../assets/images/ModelS.jpeg')}
-      style={styles.image}
-    >
+    <ImageBackground source={image} style={styles.image}>
       <View style={styles.carContainer}>
         <View style={styles.titles}>
-          <Text style={styles.title}>Model S</Text>
-          <Text style={styles.subTitle}>Pris fr. 500 000kr</Text>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.subTitle}>{subTitle}</Text>
         </View>
         <View style={styles.buttonsContainer}>
           <CustomButton type='primary' text='Preview' />

@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     width: '100%',
-    minHeight: 60,
-    height: '14%',
+    minHeight: 70,
+    height: '12%',
     marginBottom: '10%',
     justifyContent: 'center',
     alignItems: 'center'
