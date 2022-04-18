@@ -1,15 +1,11 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   carContainer: {
     width: '100%',
-    height: '100%'
+    height: '100%',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   titles: {
     width: '100%',
@@ -29,6 +25,14 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     resizeMode: 'cover'
+  },
+  buttonsContainer: {
+    width: '100%',
+    minHeight: 60,
+    height: '14%',
+    marginBottom: '10%',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
